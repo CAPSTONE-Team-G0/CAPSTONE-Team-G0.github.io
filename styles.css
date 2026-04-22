@@ -14,19 +14,13 @@
   --muted:#46464f;
   --line:#ddd7df;
   --danger:#ba1a1a;
-
   --radius-sm:12px;
   --radius-md:16px;
   --radius-lg:24px;
   --radius-xl:32px;
   --pill:999px;
-
   --shadow-soft:0 16px 36px rgba(33,36,85,.07);
 }
-
-/* =========================
-   Base
-========================= */
 
 *{box-sizing:border-box}
 
@@ -42,12 +36,7 @@ body{
   min-height:100vh;
 }
 
-h1,h2,h3,h4,h5,h6,
-.brand,
-.button,
-.nav-links a,
-.hero-kicker,
-.footer{
+h1,h2,h3,h4,h5,h6,.brand,.button,.nav-links a,.hero-kicker,.footer{
   font-family:"Plus Jakarta Sans",system-ui,sans-serif;
 }
 
@@ -56,9 +45,9 @@ a{
   text-decoration:none;
 }
 
-/* =========================
-   Header / Nav
-========================= */
+a:hover{
+  text-decoration:none;
+}
 
 .site-header{
   position:sticky;
@@ -88,23 +77,23 @@ a{
   font-size:1.1rem;
 }
 
-/* 🔥 BRAND BADGE (for your logo) */
 .brand-badge{
   width:40px;
   height:40px;
   border-radius:14px;
-  background:#fff;
-  display:flex;
+  display:inline-flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
+  background:#fff;
   box-shadow:var(--shadow-soft);
+  overflow:hidden;
 }
 
 .brand-badge img{
   max-width:60%;
   max-height:60%;
   object-fit:contain;
+  display:block;
 }
 
 .nav-links{
@@ -132,19 +121,11 @@ a{
   color:#fff;
 }
 
-/* =========================
-   Layout
-========================= */
-
 main{
   max-width:1180px;
   margin:0 auto;
   padding:34px 28px 56px;
 }
-
-/* =========================
-   Hero
-========================= */
 
 .hero,.page-hero{
   background:var(--surface);
@@ -164,29 +145,57 @@ main{
   margin:0 auto 20px;
 }
 
+.hero-kicker{
+  margin:0 0 10px;
+  color:var(--accent);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
 .hero h1,.page-hero h1{
   margin:0 0 12px;
   color:var(--primary);
   font-size:clamp(2rem,4vw,3.3rem);
+  line-height:1.06;
 }
 
 .hero p,.page-hero p{
+  max-width:760px;
+  margin:0 auto;
   color:var(--muted);
-  line-height:1.7;
+  font-size:1.02rem;
+  line-height:1.75;
 }
 
-/* =========================
-   Buttons
-========================= */
+.page-hero p{
+  margin:0;
+  max-width:800px;
+}
+
+.button-row{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
 
 .button{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  gap:8px;
   padding:13px 20px;
   border-radius:var(--pill);
   font-weight:800;
-  transition:.15s;
+  transition:transform .15s ease, filter .15s ease;
+}
+
+.button:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.03);
 }
 
 .button.primary{
@@ -199,114 +208,192 @@ main{
   color:var(--primary);
 }
 
-/* =========================
-   Cards / Team
-========================= */
+.section-title{
+  margin:0 0 14px;
+  color:var(--primary);
+  font-size:1.7rem;
+}
 
-.team-grid{
+.grid,.team-grid,.tutorial-list,.screenshot-grid{
   display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr)); /* 🔥 FIXED */
   gap:18px;
 }
 
-.person-card{
+.grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+/* TOP = 4 cards in a clean 2x2 layout */
+.team-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.screenshot-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.card,.person-card,.tutorial-step,.screenshot-card{
   background:var(--surface);
   border-radius:var(--radius-lg);
   padding:22px;
   box-shadow:var(--shadow-soft);
 }
 
-.person-card h3{
-  margin:0 0 10px;
-  color:var(--primary);
-}
-
-.person-card p{
-  margin:0;
-  color:var(--muted);
-}
-
-.person-card small{
-  display:inline-block;
-  margin-bottom:10px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(176,211,101,.2);
-  color:var(--green-dark);
-  font-weight:700;
-  font-size:.78rem;
-}
-
-.person-card.highlight{
+.card.highlight,.person-card.highlight,.screenshot-card.highlight{
   background:linear-gradient(180deg,#f8f2f9 0%, #eef2fb 100%);
 }
 
-/* 🔥 CENTERED MEMBER 5 */
-.team-single{
+.card h3,.person-card h3,.tutorial-step h3,.screenshot-card h3{
+  margin:0 0 10px;
+  color:var(--primary);
+  font-size:1.3rem;
+}
+
+.card p,.person-card p,.tutorial-step p,.screenshot-card p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.link{
+  display:inline-flex;
+  margin-top:14px;
+  font-weight:800;
+}
+
+.person-card small,.screenshot-label{
+  display:inline-flex;
+  margin-bottom:10px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:700;
+  background:rgba(176,211,101,.2);
+  color:var(--green-dark);
+}
+
+.tutorial-list{
+  grid-template-columns:1fr;
+}
+
+.tutorial-step{
+  display:grid;
+  grid-template-columns:74px 1fr;
+  align-items:start;
+  gap:18px;
+}
+
+.step-num{
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:#fff;
+  font-size:1.3rem;
+  font-weight:800;
+}
+
+.screenshot-preview{
+  width:100%;
+  min-height:220px;
+  border-radius:20px;
+  border:2px dashed var(--line);
+  background:linear-gradient(180deg,#fff 0%, #f2ecf3 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:var(--muted);
+  padding:18px;
+  margin:12px 0 14px;
+}
+
+.callout{
+  margin-top:16px;
+  padding:15px 17px;
+  border-radius:18px;
+  background:#fff;
+  border-left:5px solid var(--green);
+  color:var(--text);
+}
+
+/* Centered sections for Our Goal and Team Member Five */
+.center-section{
   display:flex;
   justify-content:center;
   margin-top:20px;
 }
 
-.team-single .person-card{
-  max-width:420px;
+.center-section .person-card{
   width:100%;
 }
 
-/* =========================
-   Footer
-========================= */
+/* Our Goal = centered and wider */
+.goal-card{
+  max-width:1040px;
+}
+
+/* Team Member 5 = centered and same size as top cards */
+.member-five-card{
+  max-width:calc((1180px - 28px - 28px - 18px) / 2);
+}
 
 .footer{
   max-width:1180px;
   margin:0 auto;
   padding:0 28px 34px;
   color:var(--muted);
-  font-size:.9rem;
+  font-size:.88rem;
 }
 
-/* =========================
-   Responsive
-========================= */
+@media (max-width: 980px){
+  .grid,.team-grid,.screenshot-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .goal-card,
+  .member-five-card{
+    max-width:none;
+  }
+}
 
 @media (max-width: 760px){
-
   .navbar{
-    flex-direction:column;
+    padding:16px 18px;
     align-items:flex-start;
+    flex-direction:column;
   }
 
   main{
-    padding:24px 18px;
+    padding:24px 18px 44px;
   }
 
-  .team-grid{
+  .hero,.page-hero{
+    padding:28px 20px;
+  }
+
+  .grid,.team-grid,.screenshot-grid{
     grid-template-columns:1fr;
   }
-}
 
-/* 2x2 grid for top */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
+  .tutorial-step{
+    grid-template-columns:1fr;
+  }
 
-/* center sections */
-.center-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+  .step-num{
+    width:52px;
+    height:52px;
+  }
 
-/* IMPORTANT: makes width match top cards */
-.center-section .person-card {
-  width: 100%;
-  max-width: 500px; /* controls card width */
-}
+  .footer{
+    padding:0 18px 28px;
+  }
 
-/* Our Goal slightly wider but still centered */
-.goal-card {
-  max-width: 700px;
-  width: 100%;
+  .goal-card,
+  .member-five-card{
+    max-width:none;
+  }
 }
