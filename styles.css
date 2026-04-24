@@ -425,7 +425,7 @@ main{
 
 .card-photo {
   width: 100%;              /* fills the column */
-  height: 180px;            /* consistent height */
+  height: 100px;           /* consistent height */
   object-fit: cover;        /* crops nicely */
   border-radius: 16px;      /* matches BAG style */
   margin-bottom: 12px;
