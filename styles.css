@@ -397,3 +397,26 @@ main{
     max-width:none;
   }
 }
+
+/* layout for image + text */
+.person-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* profile image */
+.person-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* circle */
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--surface-3);
+}
+
+/* text container */
+.person-info {
+  display: flex;
+  flex-direction: column;
+}
