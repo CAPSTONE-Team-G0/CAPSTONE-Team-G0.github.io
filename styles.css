@@ -424,10 +424,10 @@ main{
 }
 
 .card-photo {
-  width: 120px;             /* fills the column */
-  height: 120px;          /* consistent height */
-  object-fit: cover;        /* crops nicely */
-  border-radius: 16px;      /* matches BAG style */
-  margin-bottom: 12px;
-  background: var(--surface-3); /* fallback if image missing */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 12px; /* centers it */
 }
