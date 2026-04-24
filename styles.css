@@ -398,25 +398,35 @@ main{
   }
 }
 
-/* layout for image + text */
+/* layout: image + content side-by-side */
 .person-row {
   display: flex;
   align-items: flex-start;
   gap: 16px;
 }
 
-/* profile image */
+/* image styling */
 .person-photo {
   width: 70px;
   height: 70px;
-  border-radius: 50%; /* circle */
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid var(--surface-3);
+  margin-top: 6px;
+  box-shadow: 0 6px 16px rgba(33,36,85,.15);
 }
 
 /* text container */
 .person-info {
   display: flex;
   flex-direction: column;
+}
+
+/* tighten spacing */
+.person-info h3 {
+  margin: 0 0 6px;
+}
+
+.person-info small {
+  margin-bottom: 10px;
 }
