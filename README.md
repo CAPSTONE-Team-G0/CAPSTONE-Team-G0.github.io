@@ -1,4 +1,4 @@
 # CAPSTONE-Team-G0.github.io
 
 
-https://capstone-team-g0.github.io/about.html
+https://capstone-team-g0.github.io
