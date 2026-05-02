@@ -435,3 +435,17 @@ main{
   display: block;
   margin: 0 auto 12px; /* centers it */
 }
+
+/* Center team member names, roles, and buttons under photos */
+.person-card {
+  text-align: center;
+}
+
+.person-card h3,
+.person-card small {
+  text-align: center;
+}
+
+.person-card .button {
+  margin: 12px auto 0;
+}
