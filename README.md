@@ -2,9 +2,9 @@
 
 
 https://capstone-team-g0.github.io
-# 🎒 BAG — Budgeting Application for Students
+# 🎒 BAG — Budgeting Aid Guide
 
-BAG (Budgeting Application for Students) is a Flask-based web application designed to help students manage their finances throughout a semester. It allows users to track funding, expenses, and spending habits in a structured and visual way.
+BAG (Budgeting Aid Guide) is a Flask-based web application designed to help students manage their finances throughout a semester. It allows users to track funding, expenses, and spending habits in a structured and visual way.
 
 ---
 
