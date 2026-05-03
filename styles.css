@@ -450,10 +450,19 @@ main{
   margin: 12px auto 0;
 }
 
+
+
+.screenshot-card {
+  overflow: hidden;
+}
+
 .screenshot-img {
   width: 100%;
-  border-radius: 16px;
-  margin: 12px 0;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-height: 320px;
+  display: block;
+  margin: 16px 0;
+  border-radius: 18px;
+  object-fit: contain;
+  object-position: top center;
+  background: #f7f2f8;
 }
