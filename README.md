@@ -105,6 +105,7 @@ The Statements page provides a complete financial history:
 
 ## 📁 Project Structure
 
+```
 app/
 ├── routes/
 │   ├── dashboard.py
@@ -116,7 +117,9 @@ app/
 ├── static/
 ├── schema.sql
 ├── db.py
-└── **init**.py
+└── __init__.py
+```
+
 
 ---
 
