@@ -137,9 +137,11 @@ app/
 
 ---
 
-## 👩‍💻 Author
+## 👩‍💻 Group Members
 
-Joey Ackerman-Lowery
-Computer Programming Student
+* Joey Ackerman-Lowery
+* Paul Gayle
+* Mattea Isley
+* Lydia Loffert
 
 ---
