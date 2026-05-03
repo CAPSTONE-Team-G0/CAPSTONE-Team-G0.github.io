@@ -33,35 +33,35 @@ BAG (Budgeting Aid Guide) is a Flask-based web application designed to help stud
 Open PowerShell or the VS Code terminal.
 
 Clone the repository:
-
+```
 git clone https://github.com/CAPSTONE-Team-G0/BAG.git
-
+```
 Go into the project folder:
-
+```
 cd BAG
-
+```
 Create a virtual environment:
-
+```
 python -m venv venv
-
+```
 Activate the virtual environment:
-
+```
 venv\Scripts\activate
-
+```
 (You should now see (venv) at the start of your terminal line)
 
 Install required packages:
-
+```
 pip install -r requirements.txt
-
+```
 Initialize the database:
-
+```
 flask --app app init-db
-
+```
 Run the Flask application:
-
+```
 flask run
-
+```
 Open your browser and go to:
 
 http://127.0.0.1:5000/
