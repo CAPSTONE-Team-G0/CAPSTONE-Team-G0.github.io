@@ -140,7 +140,7 @@ app/
 
 ---
 
-## 👩‍💻 Group Members
+## 👩‍💻 Team Members
 
 * Joey Ackerman-Lowery
 * Paul Gayle
