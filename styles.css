@@ -449,3 +449,11 @@ main{
 .person-card .button {
   margin: 12px auto 0;
 }
+
+.screenshot-img {
+  width: 100%;
+  border-radius: 16px;
+  margin: 12px 0;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
