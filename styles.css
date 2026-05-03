@@ -458,11 +458,15 @@ main{
 
 .screenshot-img {
   width: 100%;
-  max-height: 320px;
+  max-width: 260px;   /* controls how small they are */
+  height: auto;
   display: block;
-  margin: 16px 0;
-  border-radius: 18px;
+  margin: 12px auto;  /* centers it */
+  border-radius: 14px;
   object-fit: contain;
-  object-position: top center;
-  background: #f7f2f8;
+}
+
+.screenshot-card {
+  text-align: center;
+  padding: 18px;
 }
