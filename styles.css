@@ -162,16 +162,20 @@ main{
 }
 
 .hero p,.page-hero p{
-  max-width:760px;
-  margin:0 auto;
+  max-width:100%;
+  margin:0;
   color:var(--muted);
   font-size:1.02rem;
   line-height:1.75;
 }
 
 .page-hero p{
-  margin:0;
-  max-width:800px;
+  max-width:950px;
+}
+
+.page-hero{
+  max-width:1100px;
+  margin:0 auto 26px;
 }
 
 .button-row{
@@ -430,4 +434,18 @@ main{
   border-radius: 12px;
   display: block;
   margin: 0 auto 12px; /* centers it */
+}
+
+/* Center team member names, roles, and buttons under photos */
+.person-card {
+  text-align: center;
+}
+
+.person-card h3,
+.person-card small {
+  text-align: center;
+}
+
+.person-card .button {
+  margin: 12px auto 0;
 }
