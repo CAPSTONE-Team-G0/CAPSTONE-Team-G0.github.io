@@ -148,3 +148,12 @@ app/
 * Lydia Loffert
 
 ---
+
+
+Copyright © 2026 Group_0
+
+All Rights Reserved.
+
+This website, including its source code, design, images, documentation, branding, and related materials, is the proprietary property of Group_0.
+
+No part of this website may be copied, modified, distributed, published, displayed, sublicensed, or used for commercial purposes without prior written permission from Group_0.
